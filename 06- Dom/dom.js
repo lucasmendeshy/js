@@ -48,3 +48,44 @@ titulo.style.textAlign = "center";
 titulo.style.fontFamily = "arial ";
 titulo.style.color = "purple";
 titulo.style.backgroundImage = "linear-gradient(lightyellow,lightblue)";
+
+console.log("---------------")
+
+
+//First-child -> seleciona o primeiro
+//Last-child -> seleciona o do meio
+//nth-child(2) -> seleciona o último e pode mudar as ordens
+
+const listaEditores = document.querySelector("#lista-editores");
+
+const ultimo = listaEditores.querySelector("li:last-child"); 
+
+const primeiro = listaEditores.querySelector("li:first-child");
+
+const outro = listaEditores.querySelector("li:nth-child(2)");
+
+
+/*outro.innerHTML = "<b>Deu ruim</b>";
+console.error(ultimo);
+
+outro.style.color = "red";
+*/
+
+ultimo.classList.add("destaque-item");
+
+//Adicionando o atributo target em todos os links da lista de referências
+
+//Selecionando todos os links contidos na lista ul
+
+const links = document.querySelectorAll("ul li a");
+console.log(links);
+//links[0].style.backgroundColor = "red"; 
+
+//length -> tamanho de elemento que tem dentro dele
+for ( let i = 0; i < links.length; i++ ) {
+        links[i].setAttribute("target", "_blank")
+};
+
+
+
+
