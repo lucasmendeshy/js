@@ -31,7 +31,6 @@ const subtitulo = document.querySelectorAll("h2");
 console.log(subtitulo)
 
 
-
 //Modificando elementos
 
 titulo.textContent = "Olá Mundo!";
