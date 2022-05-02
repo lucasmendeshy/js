@@ -1,10 +1,11 @@
 let formulario = document.querySelector("form");
 let numeroEscolhido = parseInt( Math.random() * 11);
+
 formulario.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    let numeroEscolhido = parseInt( Math.random() * 11);
+
     let palpiteUsuario = parseInt( document.getElementById("palpite").Value );
     let resultado = document.getElementById("resultado");
 
@@ -17,7 +18,7 @@ formulario.addEventListener("submit", function(event) {
     } else  if (numeroEscolhido > palpiteUsuario) {
         resultado.innerHTML = "Seu palpite é maior que o número sorteado";
 
-    } else if ( numeroEscolhido > palpiteUsuario  ) { 
+    } else if ( numeroEscolhido < palpiteUsuario  ) { 
         resultado.innerHTML = "Seu palpite é menor que o número sorteado";
         
     } else {
@@ -26,5 +27,5 @@ formulario.addEventListener("submit", function(event) {
 
         
 
-    console.log(palpiteUsuario);
+    //console.log(palpiteUsuario);
 });
